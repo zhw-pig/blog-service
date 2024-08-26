@@ -1,4 +1,4 @@
-package com.zhw.common;
+package com.zhw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

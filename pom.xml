@@ -65,7 +65,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.zhw.common.CommonApplication</mainClass>
+                    <mainClass>com.zhw.CommonApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>

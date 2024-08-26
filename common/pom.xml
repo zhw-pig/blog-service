@@ -26,7 +26,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <!-- optional: true 时 引用当前maven工程的工程 不会引用当前依赖项 -->
+            <!-- <optional>true</optional> -->
         </dependency>
         <!--mybatisPlus依赖-->
         <dependency>

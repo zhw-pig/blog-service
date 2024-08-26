@@ -1,4 +1,4 @@
-package com.zhw.common;
+package com.zhw;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
