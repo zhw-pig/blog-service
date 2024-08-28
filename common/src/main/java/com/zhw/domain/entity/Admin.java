@@ -1,10 +1,14 @@
 package com.zhw.domain.entity;
-import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+
+
+import java.util.Date;
+
 /**
  * 用户表(Admin)表实体类
  *
@@ -19,8 +23,9 @@ import com.baomidou.mybatisplus.annotation.TableName;
 public class Admin {
 //主键
 @TableId
-    private Long id;
+    private String id;
 //用户名
+
     private String userName;
 //昵称
     private String nickName;
@@ -39,11 +44,11 @@ public class Admin {
 //头像
     private String avatar;
 //创建人的用户id
-    private Long createBy;
+    private String createBy;
 //创建时间
     private Date createTime;
 //更新人
-    private Long updateBy;
+    private String updateBy;
 //更新时间
     private Date updateTime;
 //删除标志（0代表未删除，1代表已删除）

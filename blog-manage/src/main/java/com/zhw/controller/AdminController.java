@@ -1,9 +1,12 @@
 package com.zhw.controller;
 
-import com.zhw.mapper.AdminMapper;
+import com.zhw.domain.ResponseResult;
+import com.zhw.domain.dto.AdminLoginDto;
+import com.zhw.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 /**
  * @author zhanghuaiwei
@@ -14,6 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 @SuppressWarnings("all")
 public class AdminController {
     @Autowired
-    private AdminMapper adminMapper;
+    private AdminService adminService;
 
+    @PostMapping("login")
+    public ResponseResult login(@RequestBody @Valid AdminLoginDto adminLoginDto) {
+        ResponseResult result = adminService.login(adminLoginDto);
+        return result;
+    }
+    @GetMapping("info")
+    public ResponseResult adminInfo(@RequestHeader("Authorization") String authorization ) {
+        ResponseResult result = adminService.adminInfo(authorization);
+        return result;
+    }
 }
